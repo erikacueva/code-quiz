@@ -1,67 +1,79 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Arial Narrow', Arial, sans-serif;
 }
 
-body {
-  font-family: "Concert One", cursive;
-  font-size: 16px;
+:root {
+    --hue-neutral:900;
 }
 
-input {
-  height: 50px;
-  width: 100%;
-  padding: 6px;
-  margin-top: 10px;
-  font-size: 2.4em;
-  border: none;
+.main-container {
+    --hue: var(--hue-neutral);
+    padding: o;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  background-color: white;
+
+.container {
+    width: 800px;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
 }
 
-li {
-  height: 50px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 5px;
-  background-color: #ff5d88;
-  color: white;
-  font-size: 1.5em;
-  line-height: 1.5;
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
 }
 
-li:before {
-  content: "\200B";
-  position: absolute;
+.btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    background-color: rgb(142, 70, 244);
+    outline: none;
 }
 
-li::after {
-  content: " ";
-  display: block;
-  clear: both;
+.btn:hover {
+    border-color: black;
 }
 
-li button {
-  float: right;
-  border: none;
-  height: 40px;
-  cursor: pointer;
-  background-color: #ff9500;
-  color: white;
-  font-size: 1em;
+.btn.correct {
+    color: black;
 }
 
-li button:hover {
-  background-color: #febc5d;
+
+.start-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: rgb(142, 70, 244);
 }
 
-.todos {
-  width: 800px;
-  margin: 0 auto;
-  margin-top: 40px;
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.start-container {
+    justify-content: center;
+}
+
+.view-scores {
+    color:  rgb(142, 70, 244);
 }

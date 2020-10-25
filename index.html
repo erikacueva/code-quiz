@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop Quiz!</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="logic.js"></script>
+    <title>Quiz App</title>
 
-    <link rel="stylesheet" href="assets/stylesheet.css">
 </head>
 <body>
-    <div class="container">
+    <nav class="view-scores">
+        View Highscores
+    </nav>
+    <div class="main-container">
 
+        <div id="start-container" class="container">
+            <h1 id="quiz title"> Easiest Math Quiz</h1>
+            <button id="start-btn" class="start-btn btn">Start</button>
+        </div>
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
+        <div id="question-container" class="hide">
+           <h4 id="question">Question</h4>
+           <div id="answer-buttons" class="btn-grid">
+               <button class="btn">Answer 1</button>
+               <button class="btn">Answer 2</button>
+               <button class="btn">Answer 3</button>
+               <button class="btn">Answer 4</button>
+           </div>
+        </div>
+       
+        <div id="end-container" class="hide">
+            <h4>Quiz Complete!</h4>
+            <p> Your score is: <span id="final-score"></span></p>
+            <p> Enter your initials: <input type="text" id="initials"></input>
+                <button class="btn">Enter</button>
+            </p>
+      
+         </div>
+        
     </div>
-    <script src="assets/questions.js"></script>
-    <script src="assets/logic.js"></script>
-
-    
 </body>
 </html>
